@@ -33,6 +33,7 @@ This repository contains a **React frontend** and a **Node.js backend**, both ru
 - Vite
 - Tailwind CSS
 - Axios
+- Eslint
 
 **Backend**
 - Node.js 20
