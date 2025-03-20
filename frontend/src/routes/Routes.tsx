@@ -9,12 +9,12 @@ export default createBrowserRouter([
     children: [
       {
         index: true,
-        element: <TodoList filter='pending' />,
+        element: <TodoList />,
       },
-      {
-        path: 'completed',
-        element: <TodoList filter='completed' />,
-      },
+      // {
+      //   path: 'completed',
+      //   element: <TodoList />,
+      // },
     ],
   },
 ]);

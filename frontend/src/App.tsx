@@ -1,6 +1,11 @@
+// ** Third Components
 import { Provider } from 'react-redux';
 import { RouterProvider } from 'react-router-dom';
+
+// ** Store
 import { store } from './redux/store';
+
+// ** Router
 import router from './routes/Routes';
 
 function App() {

@@ -1,4 +1,7 @@
+// ** React Imports
 import { useState } from 'react';
+
+// ** Store
 import { useDispatch } from 'react-redux';
 import { addNewTodo } from '../../redux/todoSlice';
 
@@ -24,11 +27,11 @@ export default function AddTodoForm() {
       </label>
       <div className='relative'>
         <input
-          type='search'
+          type='text'
           id='default-search'
           value={text}
           onChange={(e) => setText(e.target.value)}
-          className='block w-full p-4 ps-4 text-md text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+          className='block w-full p-4 ps-4 pe-24 text-md text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
           placeholder='Create tasks...'
           required
         />

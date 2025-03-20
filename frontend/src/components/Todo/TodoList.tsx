@@ -1,10 +1,14 @@
-// src/components/TodoList.tsx
+// ** React Import
 import { useEffect, useState } from 'react';
+
+// ** Store
 import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '../../redux/store';
+import { fetchTodos } from '../../redux/todoSlice';
+
+// ** Reusable Components
 import TodoItem from './TodoItem';
 import AddTodoForm from './AddTodoForm';
-import { fetchTodos } from '../../redux/todoSlice';
 import LoadingSpinner from '../LoadingSpinner';
 
 type Filter = 'all' | 'pending' | 'completed';
@@ -36,9 +40,9 @@ export default function TodoList() {
             <button
               key={f}
               onClick={() => setFilter(f)}
-              className={`px-4 py-1.5 rounded-md ${
+              className={`px-4 py-1.5 text-sm md:text-md rounded-md ${
                 filter === f
-                  ? 'bg-blue-700 hover:bg-blue-800 text-white'
+                  ? 'bg-blue-700 hover:bg-blue-800 text-white font-semibold'
                   : 'bg-gray-100 hover:bg-gray-200'
               }`}
             >
@@ -48,7 +52,7 @@ export default function TodoList() {
         </div>
         <button
           onClick={() => dispatch(fetchTodos())}
-          className='px-4 py-2 bg-gray-200 hover:bg-gray-200 rounded-md'
+          className='px-4 py-2 text-sm md:text-md bg-gray-200 hover:bg-gray-200 rounded-md'
           disabled={status === 'loading'}
         >
           Refresh

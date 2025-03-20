@@ -1,11 +1,20 @@
+// ** React Import
 import { useState } from 'react';
+
+// ** Store
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../redux/store';
 import { deleteTodo, updateTodo } from '../../redux/todoSlice';
+
+// ** Types
 import type { Todo } from '../../types/todo';
+
+// ** Icons
 import DeleteIcon from '../../icons/DeleteIcon';
 import MarkAsCompleted from '../../icons/MarkAsCompleted';
 import EditIcon from '../../icons/EditIcon';
+
+// ** Reusable Component
 import ConfirmDialog from '../ConfirmDialog';
 
 export default function TodoItem({ id, title, description, status }: Todo) {
