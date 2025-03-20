@@ -42,7 +42,7 @@ export default function TodoItem({ id, title, description, status }: Todo) {
         </div>
       )}
 
-      <div className='flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity'>
+      <div className='flex gap-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity'>
         {!isEditing ? (
           <>
             <button
@@ -55,7 +55,7 @@ export default function TodoItem({ id, title, description, status }: Todo) {
                 )
               }
               className='p-1 hover:bg-gray-100 rounded-md'
-              title='Toggle status'
+              title='Mark as completed'
             >
               <MarkAsCompleted />
             </button>
